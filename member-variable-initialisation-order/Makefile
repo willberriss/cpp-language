@@ -1,7 +1,8 @@
 
-CXXFLAGS = -std=c++98 -pedantic -Wall -Werror
-#CXXFLAGS = -std=c++11 -pedantic -Wall -Werror
-#CXXFLAGS = -std=c++14 -pedantic -Wall -Werror
+# c++17 is called c++1z currently
+# N.B. This is NOT working on gcc (Raspbian 4.9.2-10) 4.9.2 for some reason
+# It's not a recognized option, but should be I thought.
+CXXFLAGS = -std=c++1z -pedantic -Wall -Werror
 
 default: build
 clean:
