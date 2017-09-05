@@ -1,6 +1,6 @@
 
-#CXXFLAGS = -std=c++98 -pedantic -Wall -Werror
-CXXFLAGS = -std=c++11 -pedantic -Wall -Werror
+CXXFLAGS = -std=c++98 -pedantic -Wall -Werror
+#CXXFLAGS = -std=c++11 -pedantic -Wall -Werror
 #CXXFLAGS = -std=c++14 -pedantic -Wall -Werror
 
 default: build
@@ -16,6 +16,7 @@ build-array: array
 build-hello: hello
 build-test: test
 build-rvalue-ref: rvalue-ref
+build-lvalue-and-rvalue: lvalue-and-rvalue
 build-rvo: rvo
 build-rule-of-five: rule-of-five
 build-tuple: tuple

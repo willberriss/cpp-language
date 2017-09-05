@@ -59,14 +59,14 @@ void printReference (const string& str)
     cout << "const str = " << str << endl;
 }
 
-// The mere presence of this overload of printReference
+// The mere presence of the following overload of printReference
 // makes the compiler choose this over the above method
-// for the call printReference( getName() );
+// for the call to printReference( getName() );
 //
-// This second function takes a mutable rvalue reference
-// mutable because it's not const
-// rvalue reference because that's what the new && operator means
-// It let's you bind a mutable reference to an rvalue, but not an lvalue
+// This second function takes a mutable rvalue reference.
+// It's mutable because it's not const
+// It's an rvalue reference because that's what the new && operator means
+// It let's you bind a mutable reference to an rvalue, but not to an lvalue
 // e.g. This parameter can bind to our rvalue getName() above 
 void printReference (string&& str)
 {

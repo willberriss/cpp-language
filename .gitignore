@@ -1,6 +1,22 @@
 # Backup files (from vi)
 *~
 
+# Executables
+*.out
+lvalue-and-rvalue
+rvo
+numbers-and-strings
+array
+lvalue-and-rvalue
+rule-of-five
+tuple
+move-constructors
+initialisation
+test
+copy-constructors
+smart-pointers
+
+
 # Prerequisites
 *.d
 
@@ -21,5 +37,3 @@
 *.a
 *.lib
 
-# Executables
-*.out
