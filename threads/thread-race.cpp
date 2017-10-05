@@ -29,10 +29,17 @@ int spawnThreads() {
     // variable accum
     //
     for (int i = 1; i <= 20; ++i) {
-        ths.push_back(thread(&addMoney, 1000));
+        // ths.push_back(thread(&addMoney, 1000));
+        // It seems we don't need the & in front of the
+        // function name, though it still works.
+        // I wonder why he used it?
+        ths.push_back(thread(addMoney, 1000));
     }
 
+    // Wait for threads to finish
     for (auto& th : ths) {
+        // join means wait for a thread to terminate
+        // so here we wait in order
         th.join();
     }
 

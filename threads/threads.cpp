@@ -8,8 +8,9 @@ void func(int x) {
 
 int main() {
     cout << "Before thread th" << "\n";
-    
-    thread th(&func, 100);
+
+    const int x=100;    
+    thread th(&func, x);
     
     cout << "After thread th and before join" << "\n";
     cout << "Still after thread th and before join" << "\n";
@@ -18,9 +19,11 @@ int main() {
     
     cout << "Still still after thread th and before join" << "\n";
     
+    cout << "Before join, i.e. thread has not terminated yet" << endl;
+    
     th.join();
     
-    cout << "Outside thread" << endl;
+    cout << "After join, i.e. thread has terminated" << endl;
     
     return 0;
 }

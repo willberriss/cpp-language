@@ -15,6 +15,11 @@ initialisation
 test
 copy-constructors
 smart-pointers
+move-constructors-stl-performance
+set-vs-unordered_set
+threads/thread-function-address
+threads/thread-race
+threads/threads
 
 
 # Prerequisites
