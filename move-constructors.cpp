@@ -1,6 +1,6 @@
 /*
  *
- * move-contructors.cpp
+ * move-constructors.cpp
  *
 */
 
@@ -19,10 +19,10 @@ class Line {
       int getLength( void ) const;
       Line(int len=0);        // simple constructor
       Line(const Line &obj);  // copy constructor
-      Line& operator=(const Line &rhs);  // assignment operator
+      Line& operator=(const Line &rhs);  // copy assignment operator (op=)
  
       Line(Line &&obj); // C++11 move constructor
-      Line& operator=(Line &&rhs); //C++11 move assignment operator
+      Line& operator=(Line &&rhs); //C++11 move assignment operator (op=)
 
       ~Line();                     // destructor
 
@@ -48,7 +48,7 @@ Line::Line(const Line &obj) {
         << ", copying obj.ptr " << obj.ptr << endl;
 }
 
-// move constructor alters arg, so cannot be const
+// A move constructor alters obj (makes it nullptr), so it cannot be const
 Line::Line(Line &&obj) {
    ptr = obj.ptr; // steal it
    obj.ptr = nullptr; // make safe
